@@ -38,7 +38,7 @@ get_header(); ?>
         </div>
     </div>
     <div class="row hide-for-medium">
-        <div class="mt24 columns lol">
+        <div class="mt24 columns">
             <h1><?php the_title(); ?></h1>
                 <?php $post_object = get_field('exhibition_author');
                     if( $post_object ):

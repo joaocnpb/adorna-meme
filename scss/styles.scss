@@ -56,7 +56,8 @@ a, h2{
 
 @mixin underline{
     font-weight: 500;
-    border-bottom: 2px solid black;
+		color: red;
+    //border-bottom: 2px solid black;
 }
 
 a:hover{
@@ -443,7 +444,7 @@ button{
     display: block;
     text-align: center;
     width: 100%;
-    margin-top: 12px;
+    margin-top: 14px;
     * {
         display: inline-block;
     }
@@ -559,13 +560,13 @@ button{
  }
 
 // FOOTER
-.footer-container{
-    background-color: #eee;
-    left: 20px;
-    width: calc(100% - 40px);
-    height: 560px;
-    padding-top: 100px;
-    img{
-        vertical-align: middle;
-    }
+footer{
+	h1, h2, h3, p, a{
+	font-size: 12px !important;
+	line-height: 24px !important;
+	}
+	background-color: #eee;
+	margin-top: 80px;
+	padding-top: 80px;
+	border-top: 2px solid #eee;
 }

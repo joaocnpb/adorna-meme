@@ -24,9 +24,8 @@
 			?>
 		</div><!-- .site-info -->
 <footer>
-    <div class="row">   
-        <div class="footer-container">
-            <div class="columns large-4 large-offset-1">
+    <div class="row">
+            <div class="columns large-4">
                <h3>adorna corações</h3>
                <p>Centro Comercial Miguel Bombarda<BR>
                Rua Miguel Bombarda, 285, Loja 10<BR>
@@ -39,11 +38,10 @@
                 <h3 style="margin-top:28px !important;">webdesign e desenvolvimento</h3>
                 <p>João Barroso</p>
             </div>
-            <div class="columns large-4 large-pull-1">
-                <?php the_custom_logo();?>    
+            <div class="columns large-3">
+                <?php the_custom_logo();?>
             </div>
         </div>
-    </div>
 </footer>
 
 <?php wp_footer(); ?>
@@ -52,6 +50,6 @@
 <script src="<?php bloginfo( 'url' ); ?>/wp-content/themes/adornacoracoes/bower_components/foundation-sites/dist/js/foundation.js" type="text/javascript"></script>
 <script src="<?php bloginfo( 'url' ); ?>/wp-content/themes/adornacoracoes/js/min/app-min.js" type="text/javascript"></script>
 <script src="<?php bloginfo( 'url' ); ?>/wp-content/themes/adornacoracoes/plugins/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-<script src="<?php bloginfo( 'url' ); ?>/wp-content/themes/adornacoracoes/js/scripts.js" type="text/javascript"></script>	
+<script src="<?php bloginfo( 'url' ); ?>/wp-content/themes/adornacoracoes/js/scripts.js" type="text/javascript"></script>
 </body>
 </html>

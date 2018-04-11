@@ -39,30 +39,45 @@ get_header(); ?>
                     <?php while( have_rows('series_photos') ): the_row();
                     $photo = get_sub_field('fotografia');
                     $phototitle = get_sub_field('titulo_fotografia');
-                    $phototechnical = get_sub_field('ficha_tecnica');
+                    $photoref = get_sub_field('referencia');
+                    $phototype = get_sub_field('tipologia');
+                    $photosizes = get_sub_field('medidas');
                     ?>
                 <a data-open="exampleModal<?php echo $i; ?>">
                     <img src="<?php echo $photo; ?>" alt="<?php echo $phototitle; ?>">
                     </a>
                 <div class="full reveal" id="exampleModal<?php echo $i; ?>" data-reveal>
                  <img src="<?php echo $photo; ?>" alt="<?php echo $phototitle; ?>">
+                 <button class="close-button" data-close aria-label="Close modal" type="button">
+                   <!--Close--><span aria-hidden="true"></span>
+                 </button>
+                  <div class="">
                     <?php if( $phototitle ): ?>
-                        <div style="position:relative;">
-                          <h1><?php echo $phototitle; ?></h1>
+                          <h2>"<?php echo $phototitle; ?>"</h2>
                     <?php endif; ?>
-                    <?php if( $phototechnical ): ?>
-                          <p><?php echo $phototechnical; ?></p>
-                      </div>
-                    <?php endif; ?>
-                    <button class="close-button" data-close aria-label="Close modal" type="button">
-                        <span aria-hidden="true">&times;</span></button>
+                    <?php $post_object = get_field('series_artist');
+                      if( $post_object ):
+                        $post = $post_object;
+                          setup_postdata( $post );?>
+                  <h2><?php the_title(); ?></h2>
+                      <?php endif; ?>
+                          <?php wp_reset_postdata(); ?>
+                    <h2><?php the_field('series_year'); ?></h2>
+                    <?php if( $phototype ): ?>
+                          <h2 class="mt14"><?php echo $phototype; ?></h2>
+                        <?php endif; ?>
+                        <?php if( $photosizes ): ?>
+                              <h2><?php echo $photosizes; ?></h2>
+                            <?php endif; ?>
+                            <a href="mailto:estefania@gmail.com?subject=ORDER REF: <?php echo $photoref ?>&body=ORDER REF: <?php echo $photoref ?>">order</a>
                         </div>
+                      </div>
                 <?php $i++;?>
                 <?php endwhile; ?>
                 <?php endif; ?>
+              </div>
                 </div>
         </div>
-    </div>
 </main>
 <?php
 get_footer(); ?>
